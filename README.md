@@ -5,6 +5,7 @@ This project implements an intelligent Python agent capable of answering questio
 ## Main Features
 - **Weather lookup**: Uses the public [Open-Meteo API](https://open-meteo.com/) to get the current weather for any city, first geolocating the city name.
 - **Time lookup**: Gets the local time for any city using geolocation and the Open-Meteo API to determine the timezone.
+- **Arxiv MCP integration**: Incorporates a Model Context Protocol (MCP) tool for searching and retrieving scientific papers from arXiv, enabling the agent to answer research-related queries.
 - **Extensible agent**: Based on Google ADK, you can easily add new tools or models.
 - **Modular code**: Main functions are in `multi_tool_agent/agent.py`.
 
