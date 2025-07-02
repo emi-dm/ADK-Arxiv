@@ -59,24 +59,9 @@ OLLAMA_API_BASE="http://localhost:11434"
 - If you use any API keys or secrets, add them here and never commit your `.env` file to version control.
 - The project will automatically load variables from `.env` if you use packages like `python-dotenv`.
 
+
+
 ## Usage
-You can import and use the agent in your own Python code, or extend it with new tools.
-
-Example usage of the main functions:
-```python
-from multi_tool_agent.agent import get_weather, get_current_time
-import asyncio
-
-# Get weather (must be called with await if async)
-result = asyncio.run(get_weather("Buenos Aires"))
-print(result)
-
-# Get local time
-result = asyncio.run(get_current_time("Madrid"))
-print(result)
-```
-
-## Notes
 - The agent uses geolocation, so it requires an Internet connection.
 - Ollama and the `qwen3:8b` model must be running locally for the agent to work.
 - If the city is not found or the API does not respond, a friendly error message is returned.
