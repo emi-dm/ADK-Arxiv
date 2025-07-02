@@ -81,6 +81,14 @@ print(result)
 - Ollama and the `qwen3:8b` model must be running locally for the agent to work.
 - If the city is not found or the API does not respond, a friendly error message is returned.
 - If you need to use API keys, set them in the `.env` file as shown above.
+- **To run the project, execute:**
+  ```bash
+  adk web
+  ```
+  from the root folder. This will start the ADK web server for your agent.
 
 ## License
 MIT
+
+---
+**Author:** [emi-dm](https://emi-dm.github.io/)
