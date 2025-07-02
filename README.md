@@ -1,10 +1,8 @@
 # Multi Tool Agent
 
-This project implements an intelligent Python agent capable of answering questions about the weather and current time in any city worldwide.
+This project implements an intelligent Python agent focused on research assistance. It is capable of searching and retrieving scientific papers from arXiv.
 
 ## Main Features
-- **Weather lookup**: Uses the public [Open-Meteo API](https://open-meteo.com/) to get the current weather for any city, first geolocating the city name.
-- **Time lookup**: Gets the local time for any city using geolocation and the Open-Meteo API to determine the timezone.
 - **Arxiv MCP integration**: Incorporates a Model Context Protocol (MCP) tool for searching and retrieving scientific papers from arXiv, enabling the agent to answer research-related queries.
 - **Extensible agent**: Based on Google ADK, you can easily add new tools or models.
 - **Modular code**: Main functions are in `multi_tool_agent/agent.py`.
@@ -60,10 +58,7 @@ OLLAMA_API_BASE="http://localhost:11434"
 - If you use any API keys or secrets, add them here and never commit your `.env` file to version control.
 - The project will automatically load variables from `.env` if you use packages like `python-dotenv`.
 
-
-
 ## Usage
-- The agent uses geolocation, so it requires an Internet connection.
 - Ollama and the `qwen3:8b` model must be running locally for the agent to work.
 - If the city is not found or the API does not respond, a friendly error message is returned.
 - If you need to use API keys, set them in the `.env` file as shown above.
