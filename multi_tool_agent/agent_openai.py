@@ -15,8 +15,8 @@ load_dotenv()
 
 set_tracing_disabled(True)
 
-MODEL = "qwen3:14b-q4_K_M"
-model=LitellmModel(model="ollama_chat/" + MODEL)
+MODEL = "gemini-2.0-flash-lite"
+model=LitellmModel(model="gemini/" + MODEL)
 
 
 
@@ -68,7 +68,7 @@ async def main():
 
     saver_agent = Agent(
         name="saver_agent",
-        model="gpt-4.1-mini",
+        model=model,
         instructions="Eres un agente que guarda papers en un archivo markdown.",
         tools=[save_papers_to_markdown],
     )
@@ -76,7 +76,7 @@ async def main():
     # Definición del agente principal usando OpenAI Agents SDK
     research_assistant_agent = Agent(
         name="research_assistant_agent_openai",
-        model="gpt-4.1-mini",
+        model=model,
         instructions=(
             "Eres un asistente de investigación avanzado especializado en descubrimiento, análisis y organización de papers académicos con memoria de sesión. "
             "Tus responsabilidades principales incluyen:\n\n"
